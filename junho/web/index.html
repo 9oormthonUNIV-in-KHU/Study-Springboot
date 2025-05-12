@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Viewer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .article h2 {
+            margin-top: 0;
+            color: #343a40;
+        }
+        .article p {
+            color: #555;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 Articles</h1>
+    <div id="articles"></div>
+
+    <div class="form-container">
+        <h2>📝 새 게시글 작성</h2>
+        <form id="articleForm">
+            <input type="text" id="title" placeholder="제목을 입력하세요" required />
+            <textarea id="content" placeholder="내용을 입력하세요" rows="5" required></textarea>
+            <button type="submit">작성하기</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    async function fetchArticles() {
+        try {
+            const response = await fetch('http://localhost:8080/api/articles');
+            const articles = await response.json();
+
+            const articlesContainer = document.getElementById('articles');
+            articlesContainer.innerHTML = ''; // 기존 글 초기화
+
+            articles.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.classList.add('article');
+
+                const title = document.createElement('h2');
+                title.textContent = article.title;
+
+                const content = document.createElement('p');
+                content.textContent = article.content;
+
+                articleElement.appendChild(title);
+                articleElement.appendChild(content);
+
+                articlesContainer.appendChild(articleElement);
+            });
+        } catch (error) {
+            console.error('Error fetching articles:', error);
+        }
+    }
+
+    async function submitArticle(event) {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value.trim();
+        const content = document.getElementById('content').value.trim();
+
+        if (!title || !content) {
+            alert('제목과 내용을 모두 입력하세요.');
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:8080/api/articles', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title, content }),
+            });
+
+            if (response.ok) {
+                alert('게시글이 성공적으로 작성되었습니다.');
+                document.getElementById('articleForm').reset();
+                fetchArticles(); // 새로 작성 후 목록 다시 로드
+            } else {
+                alert('게시글 작성에 실패했습니다.');
+            }
+        } catch (error) {
+            console.error('Error submitting article:', error);
+            alert('오류가 발생했습니다.');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchArticles();
+        document.getElementById('articleForm').addEventListener('submit', submitArticle);
+    });
+</script>
+</body>
+</html>

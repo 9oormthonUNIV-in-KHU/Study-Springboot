@@ -1,0 +1,18 @@
+services:
+  server:
+    image: lastcom1/msp-server:1.0.0
+    container_name: spring_app
+    ports:
+      - "8080:8080"
+
+  nginx:
+    image: lastcom1/msp-web:1.0.0
+    container_name: nginx_web
+    ports:
+      - "8082:80"
+
+  vite:
+    image: lastcom1/msp-vite:1.0.0
+    container_name: vite_app
+    ports:
+      - "5173:5173"
