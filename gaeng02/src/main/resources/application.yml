@@ -9,6 +9,7 @@ spring :
 
   datasource :
     url : jdbc:h2:mem:testdb
+    username : sa
 
   h2 :
     console :
