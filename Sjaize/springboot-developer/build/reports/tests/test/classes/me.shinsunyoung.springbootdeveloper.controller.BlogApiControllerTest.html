@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BlogApiControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BlogApiControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/me.shinsunyoung.springbootdeveloper.controller.html">me.shinsunyoung.springbootdeveloper.controller</a> &gt; BlogApiControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.417s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">addArticle: 블로그 글 추가에 성공한다.</td>
+<td class="success">addArticle()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteArticle: 블로그 글 삭제에 성공한다.</td>
+<td class="success">deleteArticle()</td>
+<td class="success">0.359s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAllArticles: 블로그 글 목록 조회에 성공한다.</td>
+<td class="success">findAllArticles()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findArticle: 블로그 글 조회에 성공한다.</td>
+<td class="success">findArticle()</td>
+<td class="success">0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateArticle: 블로그 글 수정에 성공한다.</td>
+<td class="success">updateArticle()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>19:09:31.388 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [me.shinsunyoung.springbootdeveloper.controller.BlogApiControllerTest]: BlogApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:09:31.425 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration me.shinsunyoung.springbootdeveloper.SpringBootDeveloperApplication for test class me.shinsunyoung.springbootdeveloper.controller.BlogApiControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-04-13T19:09:31.542+09:00  INFO 32696 --- [    Test worker] m.s.s.controller.BlogApiControllerTest   : Starting BlogApiControllerTest using Java 17.0.14 with PID 32696 (started by sjaize in /Users/sjaize/Desktop/springboot-developer)
+2025-04-13T19:09:31.543+09:00  INFO 32696 --- [    Test worker] m.s.s.controller.BlogApiControllerTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-04-13T19:09:31.716+09:00  INFO 32696 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-13T19:09:31.731+09:00  INFO 32696 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-04-13T19:09:31.852+09:00  INFO 32696 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-13T19:09:31.907+09:00  INFO 32696 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-04-13T19:09:31.908+09:00  INFO 32696 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-13T19:09:31.921+09:00  INFO 32696 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-13T19:09:31.938+09:00  INFO 32696 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-04-13T19:09:31.948+09:00  INFO 32696 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-13T19:09:32.012+09:00  INFO 32696 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-13T19:09:32.234+09:00  INFO 32696 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists article cascade 
+Hibernate: 
+    create table article (
+        id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+2025-04-13T19:09:32.243+09:00  INFO 32696 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-13T19:09:32.359+09:00  WARN 32696 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-13T19:09:32.457+09:00  INFO 32696 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-13T19:09:32.477+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.477+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.478+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-04-13T19:09:32.488+09:00  INFO 32696 --- [    Test worker] m.s.s.controller.BlogApiControllerTest   : Started BlogApiControllerTest in 1.025 seconds (process running for 1.354)
+2025-04-13T19:09:32.735+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.735+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.735+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+2025-04-13T19:09:32.854+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.854+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.854+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0 
+    where
+        a1_0.id=?
+2025-04-13T19:09:32.876+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.877+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.877+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+2025-04-13T19:09:32.883+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.884+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.884+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+2025-04-13T19:09:32.902+09:00  INFO 32696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-13T19:09:32.902+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-13T19:09:32.903+09:00  INFO 32696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0
+Hibernate: 
+    delete 
+    from
+        article 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article
+        (content, title, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0 
+    where
+        a1_0.id=?
+Hibernate: 
+    update
+        article 
+    set
+        content=?,
+        title=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.content,
+        a1_0.title 
+    from
+        article a1_0 
+    where
+        a1_0.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at 2025. 4. 13. 오후 7:09:32</p>
+</div>
+</div>
+</body>
+</html>
