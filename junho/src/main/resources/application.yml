@@ -1,7 +1,10 @@
 spring:
+  sql:
+    init:
+      mode: always
   jpa:
-#    hibernate:
-#      ddl-auto: create
+    hibernate:
+      ddl-auto: create
     # 전 송 쿼 리 확 인
     show-sql: true
     properties:
@@ -10,10 +13,14 @@ spring:
     # 테 이 블 생 성 후 에 d a t a . s q l 실 행
     defer-datasource-initialization: true
   datasource:
-    url: jdbc:h2:mem:testdb #jdbc:h2:tcp://localhost/~/testdb
+    url: jdbc:h2:tcp://localhost/~/testdb #jdbc:h2:mem:testdb
     username: sa
     password:
     driver-class-name: org.h2.Driver
   h2:
     console:
       enabled: true
+
+jwt:
+  issuer: test@test.com
+  secret_key: study-springboot
